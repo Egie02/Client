@@ -1,28 +1,64 @@
 {
   "expo": {
-    "name": "mmpcinquiry",
-    "slug": "mmpcinquiry",
+    "name": "MMPC MOBILE",
+    "slug": "iquerymmpc",
+    "scheme": "iquerymmpc",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "sdkVersion": "53.0.0",
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      },
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Allow $(PRODUCT_NAME) to use Face ID for biometric authentication."
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.iquerymmpc",
+      "runtimeVersion": "1.0.0",
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow $(PRODUCT_NAME) to use Face ID.",
+          "fingerprintPermission": "Allow $(PRODUCT_NAME) to use your fingerprint."
+        }
+      ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "3eeaa606-018d-4c96-999b-ffc71c1424fd"
+      }
+    },
+    "owner": "mmpc",
+    "updates": {
+      "url": "https://u.expo.dev/3eeaa606-018d-4c96-999b-ffc71c1424fd"
     }
   }
 }

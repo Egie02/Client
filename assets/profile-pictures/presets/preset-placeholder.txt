@@ -1,0 +1,9 @@
+This folder should contain preset profile pictures in PNG format.
+
+Add images named:
+- preset-1.png
+- preset-2.png
+- preset-3.png
+- etc.
+
+These will be selectable options for users in the profile picture modal. 
